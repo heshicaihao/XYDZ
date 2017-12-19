@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin"
+            android:layout_marginLeft="@dimen/main_margin"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/view_submit_order_address" />
+        </LinearLayout>
+
+        <include layout="@layout/view_line" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/white"
+        android:text="@string/no_address"
+        android:visibility="gone"
+        android:gravity="center"
+         />
+
+</RelativeLayout>

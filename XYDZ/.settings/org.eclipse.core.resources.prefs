@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/com/ddiiyy/xydz/activity/EditAddressActivity.java=UTF-8
+encoding//src/com/ddiiyy/xydz/adapter/ChoicePictureGridAdapter.java=UTF-8
+encoding//src/com/ddiiyy/xydz/bean/QQInfo.java=UTF-8
+encoding//src/com/ddiiyy/xydz/bean/SinaInfo.java=UTF-8
+encoding//src/com/ddiiyy/xydz/bean/WeixinInfo.java=UTF-8
+encoding//src/com/ddiiyy/xydz/pay/ALiPay.java=UTF-8
+encoding//src/com/ddiiyy/xydz/pay/H5PayDemoActivity.java=UTF-8
+encoding//src/com/ddiiyy/xydz/utils/NetWorkHelper.java=UTF-8
+encoding//src/com/ddiiyy/xydz/widget/AddAndSubView.java=UTF-8
+encoding//src/com/ddiiyy/xydz/widget/WheelView.java=UTF-8
+encoding//src/com/ddiiyy/xydz/widget/wheelview/service/XmlParserHandler.java=UTF-8
+encoding/<project>=UTF-8
+encoding/project.properties=UTF-8

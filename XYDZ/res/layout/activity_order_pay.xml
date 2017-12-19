@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/view_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/rmb"
+                    android:gravity="bottom"
+                    android:text="@string/do_pay_mun"
+                    android:textColor="@color/pay_color_black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/rmb"
+                    android:gravity="bottom"
+                    android:textColor="@color/main_color"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="23dp"
+                    android:gravity="bottom"
+                    android:text="@string/rmb"
+                    android:textColor="@color/main_color" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <LinearLayout
+                android:id="@+id/al_pay_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin"
+                android:paddingTop="@dimen/main_margin" >
+
+                <ImageView
+                    android:id="@+id/alipayke_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/al_pay_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/main_margin" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/al_pay"
+                        android:textColor="@color/pay_color_black"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/al_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="right"
+                        android:src="@drawable/checkbox_pressed" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin"
+                android:layout_marginRight="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin" >
+
+                <include layout="@layout/view_s_line" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/wechat_pay_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/main_margin"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin"
+                android:paddingTop="@dimen/main_margin" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/wechat_pay_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/main_margin" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wechat_pay"
+                        android:textColor="@color/pay_color_black"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/wx_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="right"
+                        android:src="@drawable/checkbox_normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/view_s_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/pay_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/ok_pay"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

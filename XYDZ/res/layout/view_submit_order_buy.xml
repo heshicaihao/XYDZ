@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <include layout="@layout/view_s_line" />
+
+        <RelativeLayout
+            android:id="@+id/progressbar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="right"
+            android:paddingLeft="@dimen/main_margin"
+            android:paddingRight="@dimen/main_margin" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/total_num_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/in_all"
+                    android:textColor="@color/text_color_gray_c"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/jian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/jian"
+                    android:textColor="@color/text_color_gray_c"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/total_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color_gray_c"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/total_money_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:id="@+id/total_money_num_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:gravity="bottom" >
+
+                        <TextView
+                            android:id="@+id/rmb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:gravity="center"
+                            android:text="@string/rmb"
+                            android:textColor="@color/main_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/total_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/rmb"
+                            android:gravity="center"
+                            android:textColor="@color/main_color"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|right" >
+
+                <ProgressBar
+                    android:id="@+id/total_money_progressbar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@anim/animdraw"
+                    android:indeterminateDuration="1500"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/view_s_line" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pay_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/now_buy"
+        android:gravity="center"
+        android:paddingLeft="@dimen/main_margin"
+        android:paddingRight="@dimen/main_margin"
+        android:text="@string/now_buy"
+        android:textColor="@color/white"
+        android:textSize="20sp" >
+    </TextView>
+
+</LinearLayout>

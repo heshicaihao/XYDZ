@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_bg" >
+
+    <RelativeLayout
+        android:id="@+id/in_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/yellow" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/buy"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_title"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/head_container"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/yellow" >
+
+                <LinearLayout
+                    android:id="@+id/head_login_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/main_margin"
+                    android:paddingRight="@dimen/main_margin"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/man_head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/man_head" />
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/head_unlogin_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/main_margin"
+                    android:paddingRight="@dimen/main_margin" >
+
+                    <ImageView
+                        android:id="@+id/un_login_man_head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/man_head" />
+                    
+                    <TextView
+                        android:id="@+id/please_login_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/please_login"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/my_order_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/me_order"
+                        android:drawablePadding="10dp"
+                        android:text="@string/my_order"
+                        android:textColor="@color/text_color_gray_e"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/more_me_width"
+                    android:layout_height="@dimen/more_me_width"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_me" />
+            </LinearLayout>
+
+            <include layout="@layout/view_s_line" />
+
+            <LinearLayout
+                android:id="@+id/my_works_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/me_work"
+                        android:drawablePadding="10dp"
+                        android:text="@string/my_works"
+                        android:textColor="@color/text_color_gray_e"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/more_me_width"
+                    android:layout_height="@dimen/more_me_width"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_me" />
+            </LinearLayout>
+
+            <include layout="@layout/view_s_line" />
+
+            <LinearLayout
+                android:id="@+id/manage_address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/me_manage_address"
+                        android:drawablePadding="10dp"
+                        android:text="@string/manage_address"
+                        android:textColor="@color/text_color_gray_e"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/more_me_width"
+                    android:layout_height="@dimen/more_me_width"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_me" />
+            </LinearLayout>
+
+            <include layout="@layout/view_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/me_setting"
+                        android:drawablePadding="10dp"
+                        android:text="@string/personal_setting"
+                        android:textColor="@color/text_color_gray_e"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/more_me_width"
+                    android:layout_height="@dimen/more_me_width"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_me" />
+            </LinearLayout>
+
+            <include layout="@layout/view_s_line" />
+
+            <LinearLayout
+                android:id="@+id/about_me_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/main_margin"
+                android:paddingRight="@dimen/main_margin" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/me_about_me"
+                        android:drawablePadding="10dp"
+                        android:text="@string/about_me"
+                        android:textColor="@color/text_color_gray_e"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="@dimen/more_me_width"
+                    android:layout_height="@dimen/more_me_width"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_me" />
+            </LinearLayout>
+
+            <include layout="@layout/view_s_line" />
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/main_margin"
+                android:layout_marginRight="@dimen/main_margin"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

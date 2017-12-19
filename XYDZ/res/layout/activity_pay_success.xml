@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/view_pay_success_title" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/ok_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ok_pay" />
+
+                <TextView
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ok_pay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/congratulations"
+                    android:textColor="@color/text_color_gray_c"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/order_payment_success"
+                    android:textColor="@color/text_color_gray_c"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/consignee_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/main_margin" >
+
+                    <TextView
+                        android:id="@+id/consignee_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/consignee"
+                        android:textColor="@color/pay_color_black" />
+
+                    <TextView
+                        android:id="@+id/consignee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/consignee_mark"
+                        android:text="@string/add_address"
+                        android:textColor="@color/pay_color_black" />
+
+                    <TextView
+                        android:id="@+id/consignee_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/consignee"
+                        android:layout_alignBottom="@+id/consignee"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/add_address"
+                        android:textColor="@color/pay_color_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/address_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/consignee_rl"
+                    android:padding="@dimen/main_margin" >
+
+                    <TextView
+                        android:id="@+id/shipping_address_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/shipping_address"
+                        android:textColor="@color/pay_color_black" />
+
+                    <TextView
+                        android:id="@+id/shipping_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/shipping_address_mark"
+                        android:text="@string/add_address"
+                        android:textColor="@color/pay_color_black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/view_s_line" />
+
+            <Button
+                android:id="@+id/order_id_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/main_margin"
+                android:layout_marginRight="@dimen/main_margin"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/code_bg"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/see_order_details"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/goto_home"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/main_margin"
+                android:layout_marginRight="@dimen/main_margin"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/code_bg"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/goto_home"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

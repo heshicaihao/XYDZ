@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        android:gravity="center|left" >
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/text_color_gray_c" />
+
+        <TextView
+            android:id="@+id/payment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/main_color" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_s_line" />
+
+    <com.ddiiyy.xydz.widget.MyListView
+        android:id="@+id/child_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/line_s_bg"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@null"
+        android:listSelector="#00000000" />
+
+    <include layout="@layout/view_s_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        android:gravity="center|left" >
+
+        <TextView
+            android:id="@+id/num_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="@string/num"
+            android:textColor="@color/text_color_gray_c" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/num_mark"
+            android:gravity="center"
+            android:text="@string/num"
+            android:textColor="@color/text_color_gray_c" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/num"
+            android:gravity="center"
+            android:text="@string/num"
+            android:textColor="@color/main_color" />
+
+        <TextView
+            android:id="@+id/cancel_order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/pay_btn"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/cancel_order"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/payment"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+</LinearLayout>
